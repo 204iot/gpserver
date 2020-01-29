@@ -53,6 +53,6 @@ jobs:
     - name: all in one
       run: |
           make all-in-one
-#          docker login docker.io -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
-#          docker tag gpserver:latest ${{ secrets.REGISTRY_USERNAME }}/gpserver:latest
-#          docker push ${{ secrets.REGISTRY_USERNAME }}/gpserver:latest
+          docker login docker.io -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
+          docker tag gpserver:latest ${{ secrets.REGISTRY_USERNAME }}/gpserver:latest
+          docker push ${{ secrets.REGISTRY_USERNAME }}/gpserver:latest
