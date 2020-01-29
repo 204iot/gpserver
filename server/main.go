@@ -21,6 +21,8 @@ func main() {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
+	r.Static("/ui", "./dist")
+
 	api := r.Group("/api/v1")
 	api.POST("/device", service.UploadGpsData)
 	api.GET("/devices", service.GetAllDevices)

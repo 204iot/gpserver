@@ -36,5 +36,10 @@ func UploadGpsData(c *gin.Context) {
 
 func GetAllDevices(c *gin.Context) {
 	devices := cache.GetAll()
+	if devices == nil {
+		c.JSON(http.StatusOK, []int{})
+		return
+	}
+
 	c.JSON(http.StatusOK, devices)
 }
