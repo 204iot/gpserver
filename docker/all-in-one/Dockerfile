@@ -16,5 +16,5 @@ WORKDIR /root
 COPY --from=builder /root/build/gpserver ./
 COPY --from=node-builder /root/dist dist
 
-EXPOSE 8080
+#EXPOSE 8080
 ENTRYPOINT ["/root/gpserver"]
